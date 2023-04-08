@@ -1,0 +1,287 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    background-color: aliceblue;
+    background-position: center;
+    background-size: cover;
+    font-family: Georgia;
+}
+@media(min-width: 768px) {
+    .Grid-container{ 
+    height: 140vh;
+    width: 100%;
+    display: grid;
+    grid: 100px 100px auto 300px/ 3fr;
+    grid-template-areas:
+    "navbar navbar navbar"
+    "titolo titolo titolo"
+    "corpo corpo corpo"
+    "fine fine fine";
+    }
+}
+/*.linea{
+    border: 1px solid darkred;
+}*/
+nav{
+    grid-area: navbar;
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 0.5fr;
+    grid-template-rows: 100px;
+    background-color: rgb(26, 34, 69);
+}
+header{
+    grid-area: titolo;
+    display: grid;
+    grid-template-columns: 3fr;
+    grid-template-rows: 100px;
+    background-color: lightblue;
+}
+main{
+    grid-area: corpo;
+    padding: 10px;
+}
+footer{
+    grid-area: fine;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 300px;
+    background-color: rgb(26, 34, 69);
+}
+.spazio-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.spazio-logo img{
+    width: 70px;
+    height: 70px;
+}
+#menu-navbar{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+}
+#menu-navbar a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 33px;
+    font-weight: bold;
+    font-family: Georgia;
+    font-style: italic;
+    transition: all 0.5s ease;
+}
+#menu-navbar a:hover{
+    color: darkcyan;
+}
+.spazio-search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#casella-search{
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    font-size: large;
+    border-radius: 10px 0px 0px 10px;
+    border: 2px solid darkgoldenrod;
+}
+#button-search{
+    width: 40px;
+    height: 35px;
+    text-align: center;
+    font-size: large;
+    border-radius: 0px 10px 10px 0px;
+    border: 2px solid darkgoldenrod;
+    transition: 0.4s ease-in-out;
+}
+#button-search:hover{
+    background: darkgoldenrod;
+    transform: scale(1.1);
+}
+.spazio-titolo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.spazio-titolo h1{
+    font-size: 70px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(105, 65, 108);
+}
+img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    display: inline-block;
+}
+.imgcontainer > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imgcontainer > div > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.imgcontainer{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 200px;
+    grid-auto-flow: dense;
+}
+.imgcontainer .wide{
+    grid-column: span 2;
+}
+.imgcontainer .tall{
+    grid-column: span 2;
+}
+.imgcontainer .big{
+    grid-column: span 2;
+    grid-row: span 2;
+}
+.spazio-contact-footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: aliceblue;
+}
+#contatti-footer{
+    font-size: 20px;
+    line-height: 30px;
+}
+.menu-footer{
+    list-style: none;
+}
+.menu-footer a{
+    list-style: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow';
+    list-style-type: none;
+}
+.menu-footer a{
+    text-decoration: none;
+}
+.menu-footer a:link{
+    font-size: 16px;
+}
+.menu-footer a:visited{
+    color: darkcyan;
+}
+.menu-footer a:hover{
+    background: lightblue;
+}
+.menu-footer a:active{
+    color: darkred;
+}
+.menu-footer a:focus{
+    color: darkblue;
+}
+.privacy_policy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    position: relative;
+}
+.sposta-footer1{
+    position: absolute;
+    top: 15px;
+}
+.menu-oppurtunità{
+    list-style: none;
+}
+.menu-oppurtunità a{
+    color: aliceblue;
+    list-style: none;
+    text-decoration: none;
+    color: lightblue;
+}
+#opportunità-footer{
+    font-size: 20px;
+    line-height: 30px;
+}
+.sposta-footer2{
+    position: absolute;
+    bottom: 15px;
+}
+.menuprivacy{
+    list-style: none;
+}
+.menuprivacy a{
+    list-style: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow';
+}
+.menuprivacy a{
+    text-decoration: none;
+}
+.menuprivacy a:link{
+    font-size: 16px;
+}
+.menuprivacy a:visited{
+    color: darkcyan;
+}
+.menuprivacy a:hover{
+    background: lightblue;
+}
+.menuprivacy a:active{
+    color: darkred;
+}
+.menuprivacy a:focus{
+    color: darkblue;
+}
+
+.legal-icone-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    position: relative;
+}
+.legal-footer{
+    list-style: none;
+}
+#legal{
+    font-size: 20px;
+    line-height: 30px;
+}
+.legal-footer a{
+    color: aliceblue;
+    list-style: none;
+    text-decoration: none;
+    color: lightblue;
+}
+.sposta-footer3{
+    position: absolute;
+    top: 15px;
+}
+.sposta-footer4{
+    position: absolute;
+    bottom: 15px;
+}
+.social-footer{
+    color: aliceblue;
+    list-style: none;
+    text-decoration: none;
+    color: lightblue;
+    display: flex;
+    flex-direction: row;
+}
+.canale-social-footer{
+    font-size: 16px;
+    font-weight: 900;
+    position: absolute;
+    bottom: 60px;
+    left: 5px
+}
+.social-footer li{
+    padding: 0 5px;
+}
